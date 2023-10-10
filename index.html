@@ -1,19 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:xd_Signature msdt:dt="string"></mso:xd_Signature>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Tomasz D&#281;bi&#324;ski</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">1500.00000000000</mso:Order>
+<mso:xd_ProgID msdt:dt="string"></mso:xd_ProgID>
+<mso:_ExtendedDescription msdt:dt="string"></mso:_ExtendedDescription>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Tomasz D&#281;bi&#324;ski</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ComplianceAssetId msdt:dt="string"></mso:ComplianceAssetId>
+<mso:TemplateUrl msdt:dt="string"></mso:TemplateUrl>
+<mso:ReferenceId msdt:dt="string"></mso:ReferenceId>
+<mso:ContentTypeId msdt:dt="string">0x01010081FCA12E3C944944994D23E193D5D068</mso:ContentTypeId>
+<mso:TriggerFlowInfo msdt:dt="string"></mso:TriggerFlowInfo>
+<mso:_SourceUrl msdt:dt="string"></mso:_SourceUrl>
+<mso:_SharedFileIndex msdt:dt="string"></mso:_SharedFileIndex>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link rel="stylesheet" href="style.css"/>
     <title>WebGL Course</title>
   </head>
-  <body>
-    <div id="root">
-        <div id="title">
-            <h1>WebGL Course</h1>
-        </div>
+  <body onload="start();">
+    
+    <div id="title">
+        <h1>WebGL Course</h1>
     </div>
     <div id="side-panel">
         <div id="panel">
@@ -24,16 +40,24 @@
                     padding-bottom: 1em;
                     padding-top: 1em;
                     background-color: #121025;
-                    margin-top: 0;
+                    margin: 0;
                     border-top-right-radius: 0.5em;
                     border-top-left-radius: 0.5em;
                 "
             >
-                Side panel
+                Alerts
             </p>
+            <div id="scroll-container">
+                <div id="alert"></div>
+            </div>
         </div>
+    </div>
+    <div id="warning">
+        <p style="text-align: center;">Screen size not supported</p>
     </div>
     <canvas id="graphics"></canvas>
     <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gl-matrix/2.8.1/gl-matrix-min.js"></script>
+    <script src='https://git.io/glm-js.min.js'></script>
   </body>
 </html>
